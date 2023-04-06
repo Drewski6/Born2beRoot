@@ -44,7 +44,7 @@ SUDO_NUM=$(cat /var/log/sudo/sudo.log | awk '/COMMAND/{print}' | wc -l)
 
 wall "\
 #Architecture   : `uname -a`
-#CPU physical   : `awk '/^physical id/{print $3}' /proc/cpuinfo | uniq | wc -l`
+#CPU physical   : `awk '/^physical id/{print $4}' /proc/cpuinfo | uniq | wc -l`
 #vCPU           : `awk '/^processor/{print $3}' /proc/cpuinfo | uniq | wc -l`
 #Memory Usage   : `echo $MEM_USED"/"$MEM_TOTAL"MB ("$MEM_PERC"%)"`
 #Disk Usage     : `echo $DISK_USED_MB"/"$DISK_TOTAL_GB"Gb ("$DISK_PERC"%)"`
